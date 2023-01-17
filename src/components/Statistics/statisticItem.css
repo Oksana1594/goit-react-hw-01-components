@@ -1,0 +1,15 @@
+.stats_item {
+  display: flex;
+  gap: 5px;
+  text-align: center;
+}
+
+.label {
+  font-family: 'Open Sans', 'Open Sans Unicode', 'Open Sans', Arial, sans-serif;
+}
+
+.percentage {
+  font-family: 'Open Sans', sans-serif;
+  font-size: larger;
+  font-weight: 700;
+}
