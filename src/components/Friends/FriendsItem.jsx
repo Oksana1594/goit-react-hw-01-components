@@ -1,25 +1,21 @@
-import './friendsItem.css';
+import style from './friendsItem.module.css';
 import PropTypes from 'prop-types';
-import clsx from "clsx";
 
-const FriendsItem = ({ avatar, name, isOnline }) => (
-  <li className="item">
-    <span
-      className={clsx("status", {
-        ["online"]: isOnline,
-        ["offline"]: !isOnline,
-      })}
-
-    ></span>
-    <img className="avatar" src={avatar} alt={name} width="48" />
-    <p className="name">{name}</p>
-  </li>
-);
-
-export default FriendsItem;
+const FriendsItem = ({ avatar, name, isOnline }) => {
+  return (
+    <li className={style.item}>
+      <span className={isOnline ? style.online : style.offline}></span>
+      <img className={style.avatar} src={avatar} alt={name} width="48" />
+      <p className={style.name}>{name}</p>
+    </li>
+  );
+};
 
 FriendsItem.propTypes = {
-  avatar: PropTypes.string.isRequired,
-  name: PropTypes.number.isRequired,
+  avatar: PropTypes.string,
+  name: PropTypes.string,
   isOnline: PropTypes.bool,
 };
+
+
+export default FriendsItem;
