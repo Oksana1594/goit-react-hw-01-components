@@ -3,8 +3,7 @@
   grid-template-columns: 1fr 1fr 2fr;
   align-items: center;
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
-  padding-top: 5px;
-  padding-bottom: 5px;
+  padding: 5px 25px;
 }
 
 .item:not(:last-child) {
@@ -12,6 +11,7 @@
 }
 
 .status {
+  display: block;
   width: 15px;
   height: 15px;
   border: none;
@@ -20,12 +20,30 @@
   margin-left: auto;
 }
 
-.offline {
+/* .offline {
   background-color: red;
 }
 
 .online {
   background-color: darkgreen;
+} */
+
+.online::before {
+  content: '';
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  background-color: rgb(46, 146, 28);
+}
+
+.offline::before {
+  content: '';
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  background-color: rgb(155, 36, 36);
 }
 
 .name {
